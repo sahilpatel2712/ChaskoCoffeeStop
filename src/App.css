@@ -1,0 +1,158 @@
+/* Ensure proper box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./resource/coffee_image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment:initial;
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+/* Header styling */
+.header {
+  color: white;
+  padding: 10px 0;
+}
+
+/* Container for header content */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add padding to the sides for better spacing */
+}
+
+/* Logo styling */
+.logo img {
+  width: 150px;
+}
+
+/* Navigation bar styling */
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the navigation list */
+.nav-links ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style individual navigation items */
+.nav-links li {
+  margin: 0 10px; /* Adjust space between items */
+}
+
+/* Style the navigation links */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+/* Style the hover effect */
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Styling for the 'Sign Up' item */
+.signup-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background-color: #F9C06A;
+  border-radius: 24px;
+  padding: 0 15px;
+}
+
+.signup-item a {
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  line-height: 48px; /* Centers text vertically */
+}
+
+/* Adjust spacing for .info and .login */
+.info {
+  flex-direction: row;
+  padding-top: 35px;
+  align-self: stretch;
+  font-family: 'clicker script';
+}
+
+.login {
+  flex-direction: row;
+  padding-top: 35px;
+  align-self: stretch;
+  font-family: 'clicker script';
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+.parent-div{
+  padding-left: 93px;
+  color: #f0f0f0;
+  height: 450px;
+  width: 527px;;
+}
+
+.coffee-text-div{
+  padding-left: 30px;
+  font-size:145px;
+  font-family:'Brush Script MT',cursive;
+  font-style: italic;
+  font-display:initial;
+  margin-bottom: 0px;
+}
+
+.rest-text{
+  font-family: 'Playfair Display';
+  font-size: 22px;
+  color: bisque;
+  align-self: stretch;
+  text-align: left;
+}
+.orderBox{
+margin-top: 20px;
+background-color: #F9C06A;
+height: fit-content;
+width: fit-content;
+border-radius: 240px;
+}
+
+.orderLink{
+  color: #000000;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 5px;
+  font-family: 'Badoni';
+  font-weight: 800;
+  padding: 5px 10px;
+}
