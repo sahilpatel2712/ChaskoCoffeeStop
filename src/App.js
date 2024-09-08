@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // App.js
 import './App.css';
 import Header from './components/Header';
@@ -16,18 +15,6 @@ function App() {
       <Page2 />
       <Menu/>
     </div>
-=======
-import './App.css';
-import Header from './components/Header'
-import Body from './components/Body'
-function App() {
-  return (
-    <div className="App">
-      <Header></Header>
-      <Body>
-      </Body>
-      </div>   
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
   );
 }
 

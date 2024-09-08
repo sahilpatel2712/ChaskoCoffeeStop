@@ -3,41 +3,22 @@
   box-sizing: border-box;
 }
 
-<<<<<<< HEAD
 /* Body styling */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-=======
-body {
-  background-image: url('./resource/coffee_image.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment:initial;
-  height: auto;
-  width: auto;
-  margin: 0;
-  padding: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  overflow: hidden;
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
 
 /* Header styling */
 .header {
   color: white;
   padding: 10px 0;
-<<<<<<< HEAD
   position: sticky; /* Make the header stick to the top */
   top: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background for better readability */
   z-index: 1000; /* Ensure it stays on top */
-=======
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
 
 /* Container for header content */
@@ -58,14 +39,10 @@ body {
 /* Navigation bar styling */
 .nav-links {
   display: flex;
-<<<<<<< HEAD
   justify-self:center;
   align-items: center;
   align-self: center;
   justify-content: center;
-=======
-  align-items: center;
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
 
 /* Style the navigation list */
@@ -78,12 +55,8 @@ body {
 
 /* Style individual navigation items */
 .nav-links li {
-<<<<<<< HEAD
   margin: 0;
   padding: 0;
-=======
-  margin: 0 10px; /* Adjust space between items */
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
 
 /* Style the navigation links */
@@ -91,11 +64,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 16px;
-<<<<<<< HEAD
   padding: 10px;
-=======
-  padding: 5px 10px;
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
 
 /* Style the hover effect */
@@ -123,14 +92,10 @@ body {
 
 /* Adjust spacing for .info and .login */
 .info {
-<<<<<<< HEAD
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-=======
-  flex-direction: row;
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
   padding-top: 35px;
   align-self: stretch;
   font-family: 'clicker script';
@@ -143,7 +108,6 @@ body {
   font-family: 'clicker script';
 }
 
-<<<<<<< HEAD
 /* Background image container */
 .background-image-container {
   background-image: url('./resource/coffee_image.png');
@@ -219,52 +183,6 @@ body {
 }
 
 .orderLink {
-=======
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-}
-
-.parent-div{
-  padding-left: 93px;
-  color: #f0f0f0;
-  height: 450px;
-  width: 527px;;
-}
-
-.coffee-text-div{
-  padding-left: 30px;
-  font-size:145px;
-  font-family:'Brush Script MT',cursive;
-  font-style: italic;
-  font-display:initial;
-  margin-bottom: 0px;
-}
-
-.rest-text{
-  font-family: 'Playfair Display';
-  font-size: 22px;
-  color: bisque;
-  align-self: stretch;
-  text-align: left;
-}
-.orderBox{
-margin-top: 20px;
-background-color: #F9C06A;
-height: fit-content;
-width: fit-content;
-border-radius: 240px;
-}
-
-.orderLink{
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
   color: #000000;
   text-decoration: none;
   font-size: 25px;
@@ -272,7 +190,6 @@ border-radius: 240px;
   font-family: 'Badoni';
   font-weight: 800;
   padding: 5px 10px;
-<<<<<<< HEAD
 }
 
 .learnMore{
@@ -400,6 +317,4 @@ border-radius: 240px;
   flex-wrap: wrap;
   display: flex;
   flex-direction: row;
-=======
->>>>>>> 8f3f38fa8995d98aab982cb3f8949a5247185c08
 }
