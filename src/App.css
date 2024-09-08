@@ -3,25 +3,22 @@
   box-sizing: border-box;
 }
 
+/* Body styling */
 body {
-  background-image: url('./resource/coffee_image.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment:initial;
-  height: auto;
-  width: auto;
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
-  overflow: hidden;
 }
 
 /* Header styling */
 .header {
   color: white;
   padding: 10px 0;
+  position: sticky; /* Make the header stick to the top */
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background for better readability */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 /* Container for header content */
@@ -42,7 +39,10 @@ body {
 /* Navigation bar styling */
 .nav-links {
   display: flex;
+  justify-self:center;
   align-items: center;
+  align-self: center;
+  justify-content: center;
 }
 
 /* Style the navigation list */
@@ -55,7 +55,8 @@ body {
 
 /* Style individual navigation items */
 .nav-links li {
-  margin: 0 10px; /* Adjust space between items */
+  margin: 0;
+  padding: 0;
 }
 
 /* Style the navigation links */
@@ -63,7 +64,7 @@ body {
   color: white;
   text-decoration: none;
   font-size: 16px;
-  padding: 5px 10px;
+  padding: 10px;
 }
 
 /* Style the hover effect */
@@ -91,7 +92,10 @@ body {
 
 /* Adjust spacing for .info and .login */
 .info {
+  display: flex;
   flex-direction: row;
+  align-content: center;
+  justify-content: center;
   padding-top: 35px;
   align-self: stretch;
   font-family: 'clicker script';
@@ -104,50 +108,81 @@ body {
   font-family: 'clicker script';
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
+/* Background image container */
+.background-image-container {
+  background-image: url('./resource/coffee_image.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 90%;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
 }
 
-.parent-div{
-  padding-left: 93px;
+/* Content styling within the background image container */
+.content {
+  color: white; /* Ensure text is readable */
+  text-align: center;
+}
+
+/* Page2 styling */
+.page2Content {
+  padding: 20px;
+}
+
+.parent-div {
   color: #f0f0f0;
-  height: 450px;
-  width: 527px;;
+  height: auto;
+  width: 100%; 
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  margin-top: 20px; 
+  padding-left: 20px; 
 }
 
-.coffee-text-div{
-  padding-left: 30px;
-  font-size:145px;
-  font-family:'Brush Script MT',cursive;
-  font-style: italic;
-  font-display:initial;
-  margin-bottom: 0px;
+.child-div {
+  display: flex;
+  flex-direction: column; 
+  margin-bottom: 20px; 
 }
 
-.rest-text{
+.rest-text {
   font-family: 'Playfair Display';
+  display: block;
   font-size: 22px;
   color: bisque;
-  align-self: stretch;
-  text-align: left;
-}
-.orderBox{
-margin-top: 20px;
-background-color: #F9C06A;
-height: fit-content;
-width: fit-content;
-border-radius: 240px;
+  margin-bottom: 10px; 
+  line-height: 1.5;
 }
 
-.orderLink{
+.coffee-text-div {
+  padding-left: 0; /* Ensure no extra padding */
+  font-size: 145px;
+  font-family: 'Brush Script MT', cursive;
+  font-style: italic;
+  margin-bottom: 10px; /* Add margin for spacing */
+}
+
+.orderBox {
+  background-color: #F9C06A;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 240px;
+}
+
+.LearnMore{
+  margin-top: 35px;
+  background-color: #F9C06A;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 240px; 
+}
+
+.orderLink {
   color: #000000;
   text-decoration: none;
   font-size: 25px;
@@ -155,4 +190,131 @@ border-radius: 240px;
   font-family: 'Badoni';
   font-weight: 800;
   padding: 5px 10px;
+}
+
+.learnMore{
+  color: #000000;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 5px;
+  font-family: 'Badoni';
+  font-weight: 800;
+  padding: 5px 10px;
+}
+
+.page2Heading {
+  color: brown;
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.page2-parent{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.page2Data{
+  margin-top: 100px;
+  margin-right: 250px;
+  display: flex;
+  padding-left: 20px;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+}
+
+.page2contentRestData{
+  font-family: 'Playfair Display';
+  font-size: 20px;
+}
+
+.splash{
+  padding-bottom: 200px;
+}
+
+.menuHeading{
+  font-size: 50px;
+  color: #603809;
+  font-family: 'Playfair Display';
+}
+
+.menuText1{
+  align-self: center;
+  justify-self: center;
+  margin-left: 200px;
+}
+
+.menuSlide{
+  margin-left: 93px;
+  margin-right: 93px;
+}
+
+.menuContent{
+  font-family: 'Playfair Display';
+  align-self: center;
+  justify-self: center;
+  margin-left: 70px;
+}
+
+.menu-card {
+  position: relative;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin: 20px;
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.menu-card-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.menu-card-description {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.menu-card-price {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.menu-card-button {
+  position: absolute;
+  bottom: -20px; /* Half outside of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-card-button:hover {
+  background: #0056b3;
+}
+
+.menu{
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
 }

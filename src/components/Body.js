@@ -11,8 +11,8 @@ const Body = () => {
                     Coffee
                 </div>
                 <div className="rest-text">
-                    It is best to start your day with a cup of coffee. Discover the
-                    best flavours coffee you will ever have. We provide the best
+                    It is best to start your day with a cup of coffee.<br/>Discover the
+                    best flavours coffee you will ever have.<br/>We provide the best
                     for our customers.
                 </div>
             </div>
