@@ -1,22 +1,37 @@
 import React from 'react'
 import MenuCard from './MenuCard';
 import menu1 from '../resource/menu1.png';
-import menu2 from '../resource/menu2.png'
+import menu2 from '../resource/menu2.png';
+import menu3 from '../resource/menu3.png';
+import menu4 from '../resource/menu4.png';
 const Menu = () => {
     const menuItems = [
         {
-            image: {menu1},
+            image: menu1,
             name: 'Cappucciuno',
             content: 'Coffee 50%|Milk 50%',
             price: '200'
         },
         {
-            image: {menu2},
+            image: menu2,
             name: 'Latte',
-            content: 'Smooth latte with steamed milk and a touch of foam.',
-            price: '5.49'
+            content: 'Coffee 40%|Foam 60%',
+            price: '140'
         }
-        // Add more items as needed
+        ,
+        {
+            image: menu3,
+            name: 'Expresso',
+            content: 'Coffee 80%|Milk 20%',
+            price: '110'
+        }
+        ,
+        {
+            image: menu4,
+            name: 'Light Coffee',
+            content: 'Coffee 40%|Milk 60%',
+            price: '160'
+        }
     ];
 
     return (
