@@ -1,4 +1,8 @@
 /* Ensure proper box-sizing for all elements */
+/* slick-carousel default styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 * {
   box-sizing: border-box;
 }
@@ -482,43 +486,215 @@ body {
   padding: 5px;
 }
 
-.feedbackPageDiv {
+.SubscribeBack {
+  background-image: url('./resource/subscribebg.png'); /* Background image */
+  height: 374px; /* Set height */
+  width: 100%; /* Use 100% width for responsiveness */
+  position: relative; /* Set to relative to position children absolutely */
+  z-index: 0; /* Adjust z-index to be lower than the rectangle */
+}
+
+.sub-brown-rectangle {
+  background-color: rgba(139, 69, 19, 0.8); /* Brown color with some opacity */
+  height: 100%; /* Full height of the parent */
+  width: 100%; /* Full width of the parent */
+  position: absolute; /* Allow positioning */
+  top: 0; /* Align to the top of the parent */
+  left: 0; /* Align to the left of the parent */
+  z-index: -1; /* Ensure it's on top of the background image */
+  overflow: hidden; /* Hide overflow */
+}
+
+.sub-center-div{
+  height: auto;
+  width: auto;
+  margin-left: 130px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.subHead{
+  font-size: 40px;
+  color: #f0f0f0;
+  font-family: 'Playfair Display';
+}
+
+.subText{
+  color: #f0f0f0;
+  font-family: 'Playfair Display';
+  font-size: 20px;
+}
+
+.subscribe-input-container {
+  margin-top: 10px;
+  padding: 10px; /* Add some padding */
+  border-radius: 20px; /* Rounded corners */
+  width: 400px; /* Set a width for the input container */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+}
+
+.subscribe-button {
+  background-color: #F9C06A; /* Button background color */
+  border: none; /* Remove default border */
+  color:black; /* Text color */
+  padding: 10px 20px; /* Padding for the button */
+  cursor: pointer; /* Change cursor on hover */
+  font-size: 16px; /* Button font size */
+  height: 36px;
+  font-weight: bold;
+  font-family: 'Playfair Display';
+}
+
+.email-input {
+  padding: 10px;
+  height: 36px;
+  border: none; /* Remove default border */
+  outline: none; /* Remove outline on focus */
+  width: 100%; /* Full width of the container */
+}
+.footerDiv {
+  position: relative; /* Allow absolute positioning of child elements */
+  height: 450px;
+  width: 1263px;
+  overflow: hidden; /* Prevent overflow */
+}
+
+.footerImg {
+  width: 100%; /* Ensure the image fills the footerDiv */
+  height: 100%; /* Maintain aspect ratio or fit the footerDiv */
+  object-fit: cover; /* Cover the container */
+  position: absolute; /* Position image absolutely */
+  top: 0; /* Align to the top of the parent */
+  left: 0; /* Align to the left of the parent */
+  z-index: -1; /* Position below the brown rectangle */
+}
+
+.footer-brown-rectangle {
+  background: linear-gradient(
+    180deg, /* Adjust direction as needed */
+    rgba(27, 12, 1, 0.8), /* Darker brown color */
+    rgba(116, 71, 15, 0.5) /* Lighter brown or beige color */
+  );
+  height: 100%; /* Full height of the parent */
+  width: 100%; /* Full width of the parent */
+  position: absolute; /* Positioning on top of the footerDiv */
+  top: 0; /* Align to the top of the parent */
+  left: 0; /* Align to the left of the parent */
+  z-index: 0; /* Ensure it's above the background image */
+  opacity: 1; /* You can remove this if not needed, as the gradient colors have their own transparency */
+}
+
+
+/* Cup image style */
+.subCup {
+  position: absolute; /* Position it relative to the footerDiv */
+  z-index: 1; /* Ensure it appears above the brown rectangle */
+}
+.footNameHead{
+  font-family: 'clicker script';
+  font-size: 35px;
+  color: wheat;
+}
+
+.footNameContent{
+  font-size: 17px;
+  font-family: 'Playfair Display';
+  color: white;
+}
+
+.footerContent{
+  height: 258px;
+  width:380px;
+}
+
+.social-media-icons {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  flex-direction: column; /* Arrange children in a column */
-  background-color: #f5f5f5; /* Optional: background color */
+  justify-content: left; /* Center the icons */
+  align-items: left; /* Center the icons vertically */
+  gap: 20px; /* Spacing between icons */
 }
 
-.headingDiv {
-  display: flex;
-  flex-direction: column; /* Arrange heading and content in a column */
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text inside headingDiv */
+.social-media-icons a {
+  color: white; /* Change color to white */
+  font-size: 24px; /* Adjust the size as needed */
+  transition: color 0.3s; /* Smooth color transition on hover */
 }
 
-.feedbackHeading {
-  font-size: 45px;
-  font-family: 'Playfair Display', serif; /* Add 'serif' as fallback */
-  color: #603809;
+.social-media-icons a:hover {
+  color: #ccc; /* Change color on hover (optional) */
 }
 
-.feedContent {
-  font-size: 18px; /* Adjust font size as needed */
-  color: #603809; /* Match the color with heading or adjust */
+.About,.Company li a h2{
+  color: wheat;
+  font-size: 50px;
+  font-family: 'clicker script';
+  background-color: #333; /* Background color of the block */
 }
 
-.feedBackDiv{
-  height: 524px;
-  width: 980px;
-  margin-left: 196px;
-  margin-right: 196px;
-  margin-top: 43px;
-  background-color: #FFF9F1;
+.nav-list {
+  font-family: 'Playfair Display';
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
 }
 
-.quote-image{
-  margin-left: 29px;
-  margin-top: 54px;
+.nav-list li {
+  margin-bottom: 2px; /* Space between items */
+}
+
+.nav-list a {
+  color: white; /* Text color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Font size */
+  transition: color 0.3s; /* Transition effect on hover */
+  display: block; /* Make the link fill the list item */
+  padding: 10px; /* Padding for the links */
+}
+.Companyhead,.Abouthead{
+color: wheat;
+}
+
+.completeContentDiv {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  padding: 20px; /* Optional: add some padding around the div */
+  margin-top: 20px;
+}
+
+.contact-us {
+  color: white;
+  padding: 20px; /* Padding for inner content */
+  border-radius: 5px; /* Rounded corners */
+  max-width: 400px; /* Maximum width of the block */
+  text-align: left; /* Left align text */
+}
+
+.contact-us h2 {
+  color: wheat;
+  font-family: 'clicker script';
+  font-size: 28px; /* Font size for heading */
+}
+
+.contact-list {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.contact-list li {
+  margin: 10px 0; /* Space between list items */
+}
+
+.contact-list a {
+  color: white;
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-list a:hover {
+  text-decoration: underline; /* Underline on hover */
 }
