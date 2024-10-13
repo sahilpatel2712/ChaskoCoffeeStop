@@ -29,7 +29,7 @@ const Page3 = () => {
         }
     ];
     return (
-        <div>
+        <div className="page3-div">
             <div className="page3-header-div">
                 <div>
                     <h2 className="page3-heading">Why are we different?</h2>

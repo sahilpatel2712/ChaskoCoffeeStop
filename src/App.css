@@ -1,55 +1,70 @@
-/* Ensure proper box-sizing for all elements */
-/* slick-carousel default styles */
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
 * {
   box-sizing: border-box;
 }
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-/* Body styling */
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .signup-item {
+    width: 100%;
+    text-align: center;
+  }
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
 }
 
-/* Header styling */
 .header {
-  color: white;
-  padding: 10px 0;
-  position: sticky; /* Make the header stick to the top */
+  align-items: center;
+  padding-bottom: 10PX;
+  position: sticky;
   top: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent background for better readability */
-  z-index: 1000; /* Ensure it stays on top */
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 1000;
 }
 
-/* Container for header content */
 .header-container {
   display: flex;
+  font-family: 'Playfair Display';
+  color: wheat;
+  font-size: 2rem;
   justify-content: space-between;
   align-items: center;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 20px; /* Add padding to the sides for better spacing */
+  width: 100%;
+}
+.logo{
+  padding-top: 5px;
 }
 
-/* Logo styling */
 .logo img {
   width: 150px;
 }
 
-/* Navigation bar styling */
 .nav-links {
   display: flex;
-  justify-self:center;
   align-items: center;
-  align-self: center;
-  justify-content: center;
 }
 
-/* Style the navigation list */
 .nav-links ul {
   display: flex;
   list-style-type: none;
@@ -57,13 +72,10 @@ body {
   padding: 0;
 }
 
-/* Style individual navigation items */
 .nav-links li {
-  margin: 0;
-  padding: 0;
+  margin: 0 10px;
 }
 
-/* Style the navigation links */
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -71,54 +83,35 @@ body {
   padding: 10px;
 }
 
-/* Style the hover effect */
 .nav-links a:hover {
   text-decoration: underline;
 }
 
-/* Styling for the 'Sign Up' item */
-.signup-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px ;
-  height: 48px;
-  background-color: #F9C06A;
-  border-radius: 24px;
-}
-
 .signup-item a {
-  color: #000;
+  color: black;
+  background-color: #F9C06A;
+  border-radius: 240px;
   font-size: 16px;
   text-decoration: none;
-  line-height: 48px; /* Centers text vertically */
 }
 
-/* Adjust spacing for .info and .login */
 .info {
+  flex: 1;
   display: flex;
-  flex-direction: row;
-  align-content: center;
   justify-content: center;
-  padding-top: 35px;
-  align-self: stretch;
-  font-family: 'clicker script';
+  align-items: center;
 }
 
 .login {
-  flex-direction: row;
-  padding-top: 35px;
-  align-self: stretch;
-  font-family: 'clicker script';
+  display: flex;
+  align-items: center;
 }
 
-/* Content styling within the background image container */
 .content {
-  color: white; /* Ensure text is readable */
+  color: white;
   text-align: center;
 }
 
-/* Page2 styling */
 .page2Content {
   padding: 20px;
 }
@@ -126,32 +119,19 @@ body {
 .parent-div {
   background-image: url('./resource/coffee_image.png');
   color: #f0f0f0;
-  background-size:cover; /* Ensures the entire image is visible */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 1300px; /* Prevents the background from covering the whole screen on large displays */
-  height: auto;
-  min-height: 100vh; /* Full viewport height */
-  max-height: 100vh; /* Prevents the background from exceeding the screen height */
+  height: 527px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   padding-left: 20px;
   padding-right: 20px;
-  overflow: hidden; /* Prevents overflow of content */
+  overflow: hidden;
 }
-/* Adjust the container for smaller screens */
-@media (max-width: 768px) {
-  .parent-div {
-    background-size: contain; /* Ensures the image fits within the container */
-    padding-left: 10px;
-    padding-right: 10px;
-    min-height: 50vh; /* Adjust height for smaller screens */
-  }
-}
-
 
 .child-div {
   display: flex;
@@ -169,11 +149,11 @@ body {
 }
 
 .coffee-text-div {
-  padding-left: 0; /* Ensure no extra padding */
+  padding-left: 0; 
   font-size: 145px;
   font-family: 'Brush Script MT', cursive;
   font-style: italic;
-  margin-bottom: 10px; /* Add margin for spacing */
+  margin-bottom: 10px;
 }
 
 .orderBox {
@@ -220,9 +200,12 @@ body {
 }
 
 .page2-parent{
+  background-color: white;
+  height: 500px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 .page2Data{
   margin-top: 100px;
@@ -252,12 +235,12 @@ body {
 .menuText1{
   align-self: center;
   justify-self: center;
-  margin-left: 200px;
 }
 
 .menuSlide{
-  margin-left: 93px;
-  margin-right: 93px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .menuContent{
@@ -309,18 +292,19 @@ body {
   overflow: visible;
   left: 50%;
   padding-left: 200px;
-  background: #007bff;
-  color: #fff;
+  background: #F9C06A;
+  color: black;
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
   font-size: 1em;
+  font-family: 'Badoni';
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .menu-card-button:hover {
-  background: #0056b3;
+  background: #F9C06A
 }
 
 .menu{
@@ -347,7 +331,6 @@ body {
   color: black;
   padding-left: 40px;
   margin-bottom: 20px;
-  justify-self: auto;
 }
 
 .WeBest-card-image{
@@ -370,6 +353,12 @@ body {
   margin: 20px;
   padding-top: 20px;
 }
+
+.page3-div{
+  height: 650px;
+  width: 100%;
+}
+
 .page3-footer{
   display: flex;
   justify-content: center;
@@ -377,8 +366,21 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+.menuPage{
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  flex-direction: column;
+}
+
 .page3Text{
   font-size: 20px;
+}
+
+.cardsLocation{
+  display: flex;
+  justify-content: space-evenly;
+  align-self: center;
 }
 
 .footer-h2{
@@ -409,51 +411,48 @@ body {
 }
 
 .page4-div {
-  margin-top: 30px;
-  background-image: url('./resource/page4bg.png'); /* Correct path if file is in src/resource */
-  color: #f0f0f0;
-  background-size: cover; /* Ensures the entire image is visible */
+  margin-top: 3%;
+  background-image: url('./resource/page4bg.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  max-width: 1300px; /* Prevents the background from covering the whole screen on large displays */
-  min-height: 100vh; /* Full viewport height */
-  position: relative; /* Allows positioning of the inner elements */
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding-right: 20px;
-  overflow: hidden; /* Prevents overflow of content */
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .brown-rectangle {
-  background-color: rgba(139, 69, 19, 0.8); /* Brown color with some opacity */
-  width: 100%; /* Full width of the page */
-  height: 100vh; /* Full height of the page */
-  position: absolute; /* This will allow you to position the rectangle anywhere */
-  top: 0; /* Align to the top of the parent */
-  left: 0; /* Align to the left of the parent */
-  z-index: 1; /* Ensure it's on top of the background image */
+  background-color: rgba(139, 69, 19, 0.8);
+  width: 100%;
+  height: 600px;
+  position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
 .bottom-left-image {
-  position: absolute; /* Positioning relative to .page4-div */
-  bottom: 0; /* Align to the bottom of the parent */
-  left: 861px; /* Align to the left of the parent */
-  width: 400px; /* Set the desired size */
-  height: auto; /* Maintain aspect ratio */
-  z-index: 2; /* Ensure it's on top of the rectangle if needed */
+  position: absolute;
+  bottom: 0;
+  align-self:last baseline;
+  width: 400px;
+  z-index: 2;
   overflow: hidden;
 }
+
 .cup-left-image{
-  position: absolute; /* Positioning relative to .page4-div */
-  bottom: 0; /* Align to the bottom of the parent */
-  left: 861px; /* Align to the left of the parent */
-  width: 300px; /* Set the desired size */
-  height: 467px; /* Maintain aspect ratio */
-  z-index: 3; /* Ensure it's on top of the rectangle if needed */
+  position: absolute;
+  bottom: 0;
+  align-self:last baseline;
+  left: 861px;
+  width: 300px;
+  height: 467px;
+  z-index: 3;
   overflow: hidden;
 }
 
@@ -466,6 +465,7 @@ body {
 }
 
 .page4-text-head{
+  color: white;
   font-size: 50px;
   font-family: 'Playfair Display';
 }
@@ -473,6 +473,7 @@ body {
 .paraText{
   margin-top: 22px;
   height: 68px;
+  color: wheat;
   width: 409px;
   font-family: 'Playfair Display';
   font-size: 20px;
@@ -487,22 +488,22 @@ body {
 }
 
 .SubscribeBack {
-  background-image: url('./resource/subscribebg.png'); /* Background image */
-  height: 374px; /* Set height */
-  width: 100%; /* Use 100% width for responsiveness */
-  position: relative; /* Set to relative to position children absolutely */
-  z-index: 0; /* Adjust z-index to be lower than the rectangle */
+  background-image: url('./resource/subscribebg.png');
+  height: 374px;
+  width: 100%; 
+  position: relative;
+  z-index: 0; 
 }
 
 .sub-brown-rectangle {
-  background-color: rgba(139, 69, 19, 0.8); /* Brown color with some opacity */
-  height: 100%; /* Full height of the parent */
-  width: 100%; /* Full width of the parent */
-  position: absolute; /* Allow positioning */
-  top: 0; /* Align to the top of the parent */
-  left: 0; /* Align to the left of the parent */
-  z-index: -1; /* Ensure it's on top of the background image */
-  overflow: hidden; /* Hide overflow */
+  background-color: rgba(139, 69, 19, 0.8); 
+  height: 100%; 
+  width: 100%;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  z-index: -1;
+  overflow: hidden; 
 }
 
 .sub-center-div{
@@ -530,20 +531,20 @@ body {
 
 .subscribe-input-container {
   margin-top: 10px;
-  padding: 10px; /* Add some padding */
-  border-radius: 20px; /* Rounded corners */
-  width: 400px; /* Set a width for the input container */
-  display: flex; /* Use flexbox for alignment */
-  align-items: center; /* Center items vertically */
+  padding: 10px; 
+  border-radius: 20px; 
+  width: 400px; 
+  display: flex; 
+  align-items: center; 
 }
 
 .subscribe-button {
-  background-color: #F9C06A; /* Button background color */
-  border: none; /* Remove default border */
-  color:black; /* Text color */
-  padding: 10px 20px; /* Padding for the button */
-  cursor: pointer; /* Change cursor on hover */
-  font-size: 16px; /* Button font size */
+  background-color: #F9C06A; 
+  border: none; 
+  color:black; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  font-size: 16px; 
   height: 36px;
   font-weight: bold;
   font-family: 'Playfair Display';
@@ -552,47 +553,42 @@ body {
 .email-input {
   padding: 10px;
   height: 36px;
-  border: none; /* Remove default border */
-  outline: none; /* Remove outline on focus */
-  width: 100%; /* Full width of the container */
+  border: none; 
+  outline: none; 
+  width: 100%; 
 }
 .footerDiv {
-  position: relative; /* Allow absolute positioning of child elements */
-  height: 450px;
-  width: 1263px;
-  overflow: hidden; /* Prevent overflow */
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  overflow: hidden;
 }
 
 .footerImg {
-  width: 100%; /* Ensure the image fills the footerDiv */
-  height: 100%; /* Maintain aspect ratio or fit the footerDiv */
-  object-fit: cover; /* Cover the container */
-  position: absolute; /* Position image absolutely */
-  top: 0; /* Align to the top of the parent */
-  left: 0; /* Align to the left of the parent */
-  z-index: -1; /* Position below the brown rectangle */
+  width: 100%;
+  height: 400px;
+  max-height: 100%;
+  z-index: -1;
 }
 
 .footer-brown-rectangle {
   background: linear-gradient(
-    180deg, /* Adjust direction as needed */
-    rgba(27, 12, 1, 0.8), /* Darker brown color */
-    rgba(116, 71, 15, 0.5) /* Lighter brown or beige color */
+    180deg,
+    rgba(27, 12, 1, 0.8),
+    rgba(116, 71, 15, 0.5)
   );
-  height: 100%; /* Full height of the parent */
-  width: 100%; /* Full width of the parent */
-  position: absolute; /* Positioning on top of the footerDiv */
-  top: 0; /* Align to the top of the parent */
-  left: 0; /* Align to the left of the parent */
-  z-index: 0; /* Ensure it's above the background image */
-  opacity: 1; /* You can remove this if not needed, as the gradient colors have their own transparency */
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 1;
 }
 
-
-/* Cup image style */
 .subCup {
-  position: absolute; /* Position it relative to the footerDiv */
-  z-index: 1; /* Ensure it appears above the brown rectangle */
+  position: absolute; 
+  z-index: 1; 
 }
 .footNameHead{
   font-family: 'clicker script';
@@ -613,88 +609,152 @@ body {
 
 .social-media-icons {
   display: flex;
-  justify-content: left; /* Center the icons */
-  align-items: left; /* Center the icons vertically */
-  gap: 20px; /* Spacing between icons */
+  justify-content: left;
+  align-items: left;
+  gap: 20px; 
 }
 
 .social-media-icons a {
-  color: white; /* Change color to white */
-  font-size: 24px; /* Adjust the size as needed */
-  transition: color 0.3s; /* Smooth color transition on hover */
+  color: white; 
+  font-size: 24px; 
+  transition: color 0.3s; 
 }
 
 .social-media-icons a:hover {
-  color: #ccc; /* Change color on hover (optional) */
+  color: #ccc;
 }
 
 .About,.Company li a h2{
   color: wheat;
   font-size: 50px;
   font-family: 'clicker script';
-  background-color: #333; /* Background color of the block */
+  background-color: #333;
 }
 
 .nav-list {
   font-family: 'Playfair Display';
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list li {
-  margin-bottom: 2px; /* Space between items */
+  margin-bottom: 2px;
 }
 
 .nav-list a {
-  color: white; /* Text color */
-  text-decoration: none; /* Remove underline from links */
-  font-size: 18px; /* Font size */
-  transition: color 0.3s; /* Transition effect on hover */
-  display: block; /* Make the link fill the list item */
-  padding: 10px; /* Padding for the links */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s; 
+  display: block;
+  padding: 10px;
 }
 .Companyhead,.Abouthead{
 color: wheat;
 }
 
 .completeContentDiv {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Center items vertically */
-  padding: 20px; /* Optional: add some padding around the div */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
   margin-top: 20px;
 }
 
 .contact-us {
   color: white;
-  padding: 20px; /* Padding for inner content */
-  border-radius: 5px; /* Rounded corners */
-  max-width: 400px; /* Maximum width of the block */
-  text-align: left; /* Left align text */
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  text-align: left; 
 }
 
 .contact-us h2 {
   color: wheat;
   font-family: 'clicker script';
-  font-size: 28px; /* Font size for heading */
+  font-size: 28px;
 }
 
 .contact-list {
-  list-style-type: none; /* Remove bullet points */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0; 
 }
 
 .contact-list li {
-  margin: 10px 0; /* Space between list items */
+  margin: 10px 0;
 }
 
 .contact-list a {
   color: white;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none;
 }
 
 .contact-list a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
+}
+
+.feedback-div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.feedback-heading{
+  font-size: 3.7rem;
+  color: #603809;
+  font-family: 'Playfair Display';
+}
+
+.feedback-para{
+  font-size: 1.8rem;
+  margin-left: 8%;
+  font-family: 'Playfair Display';
+  color: black;
+}
+
+.feedback-data-content {
+  background-color: wheat;
+  width: 984px;
+  height: 524px;
+  display: flex;
+  margin-bottom: 5%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 80px;
+}
+
+.feedback-slide {
+  padding-left: 15%;
+  padding-right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.person {
+  font-size: 1.6rem;
+  color:  black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.feedback{
+  font-size: 3rem;
+  font-family: 'clicker script';
+  color: black;
 }
